@@ -67,33 +67,33 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-import star from '../star/star.vue'
-export default {
-  props: {
-    seller: {
-      type: Object
-    }
-  },
-  data () {
-    return {
-      detailShow: false
-    }
-  },
-  methods: {
-    showDetail () {
-      this.detailShow = true
+  import star from '../star/star.vue'
+  export default {
+    props: {
+      seller: {
+        type: Object
+      }
     },
-    hideDetail () {
-      this.detailShow = false
+    data () {
+      return {
+        detailShow: false
+      }
+    },
+    methods: {
+      showDetail () {
+        this.detailShow = true
+      },
+      hideDetail () {
+        this.detailShow = false
+      }
+    },
+    created () {
+      this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
+    },
+    components: {
+      star
     }
-  },
-  created () {
-    this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
-  },
-  components: {
-    star
   }
-}
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   @import "header.styl";

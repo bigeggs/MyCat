@@ -2,6 +2,7 @@
   <div>
     <!-- 头部 -->
     <v-header :seller="seller"></v-header>
+     <v-store :seller="seller"></v-store>
      <!--主体切换 
     <div class="tab border-1px">
       <div class="tab-item">
@@ -34,6 +35,7 @@
   import header from './components/header/header.vue'
   import {urlParse} from './common/js/util'
   import data from './data/data'
+  import store from './components/storeInfo/storeInfo.vue'
 //  const ERR_OK = 0;
   export default {
     data () {
@@ -58,7 +60,8 @@
       this.seller = data.seller
     },
     components: {
-      'v-header': header
+      'v-header': header,
+      'v-store': store
     }
   }
 </script>

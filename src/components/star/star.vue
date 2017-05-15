@@ -4,7 +4,7 @@
 <span v-for='span in spans':class='span'   class='star_item'></span>
   </div></div>
 </template>
-<style lang="stylus" rel=<style lang="stylus">
+<style lang="stylus">
 @import "star.stylus"
 </style>
 <script>
